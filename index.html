@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ultimate PS5 Web Emulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="boot-menu">
+    <div class="glass-card">
+        <h1 class="logo">PS<span>Web</span></h1>
+        <p>GBA • GBC • NES • SNES • GENESIS • DOS • EXE • PSP • PS1</p>
+        <input type="file" id="file-selector" hidden>
+        <button class="load-btn" onclick="document.getElementById('file-selector').click()">LOAD GAME FILE</button>
+        <div class="hint">Upload .zip for PC Games</div>
+    </div>
+</div>
+
+<div id="game-view">
+    <div id="player"></div>
+</div>
+
+<div id="controller-view">
+    <div class="shoulder-row">
+        <div class="l-side"><button class="trigger" id="L2">L2</button><button class="trigger" id="L1">L1</button></div>
+        <div class="r-side"><button class="trigger" id="R1">R1</button><button class="trigger" id="R2">R2</button></div>
+    </div>
+
+    <div class="center-row">
+        <button class="meta" id="select">SELECT</button>
+        <button class="exit" onclick="location.reload()">EXIT</button>
+        <button class="meta" id="start">START</button>
+    </div>
+
+    <div class="input-grid">
+        <div class="dpad">
+            <button class="dp" id="up">↑</button>
+            <button class="dp" id="left">←</button>
+            <button class="dp" id="right">→</button>
+            <button class="dp" id="down">↓</button>
+        </div>
+
+        <div class="joysticks">
+            <div class="stick-base"><div class="nub"></div></div>
+            <div class="stick-base"><div class="nub"></div></div>
+        </div>
+
+        <div class="actions">
+            <button class="symbol" id="tri">▲</button>
+            <button class="symbol" id="sq">■</button>
+            <button class="symbol" id="cir">●</button>
+            <button class="symbol" id="cross">✖</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
